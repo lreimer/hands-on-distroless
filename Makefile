@@ -38,7 +38,7 @@ distroless/pull:
 distroless/history:
 	docker history gcr.io/distroless/static-debian10
 	@echo ""
-	$(call green, "# 1 Layer")
+	$(call green, "# Contains 1 Layer with")
 	$(call green, "  - ca-certificates")
 	$(call green, "  - /etc/passwd entry for root user")
 	$(call green, "  - a /tmp directory")
@@ -47,32 +47,31 @@ distroless/history:
 
 	docker history gcr.io/distroless/base-debian10
 	@echo ""
-	$(call green, "# 2 Layers")
+	$(call green, "# Contains 2 Layers with")
 	$(call green, "  - everything from Distroless static image")
 	$(call green, "  - glibc")
 	@echo ""
 
 	docker history gcr.io/distroless/cc-debian10
 	@echo ""
-	$(call green, "# 3 Layers")
+	$(call green, "# Contains 3 Layers with")
 	$(call green, "  - everything from Distroless base image")
 	$(call green, "  - libgcc1 and its dependencies")
 	@echo ""
 
 	docker history gcr.io/distroless/java:8
 	@echo ""
-	$(call green, "# 4 Layers")
+	$(call green, "# Contains 4 Layers with")
 	$(call green, "  - everything from Distroless base image")
 	$(call green, "  - OpenJDK8 and its dependencies")
 	@echo ""
 
 	docker history gcr.io/distroless/java:11
 	@echo ""
-	$(call green, "# 4 Layers")
+	$(call green, "# Contains 4 Layers with")
 	$(call green, "  - everything from Distroless base image")
 	$(call green, "  - OpenJDK11 and its dependencies")
 	@echo ""
-
 
 distroless/busybox:
 	@docker build -t lreimer/hands-on-distroless:busybox distroless-busybox/
