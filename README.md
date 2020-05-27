@@ -1,8 +1,7 @@
 # Hands-on Distroless Docker Images
 
-Demo repository to showcase the usage of [Google's Distroless](https://github.com/GoogleContainerTools/distroless) Docker images.
+Demo repository to showcase the usage of [Google's Distroless](https://github.com/GoogleContainerTools/distroless) Docker images. For the agenda of the accompanying Tech Talk Thursday video use this command:
 
-For the agenda of the accompanying Tech Talk Thursday video issue this:
 ```bash
 $ make agenda
 ```

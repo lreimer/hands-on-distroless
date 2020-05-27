@@ -76,27 +76,27 @@ distroless/history:
 distroless/busybox:
 	@docker build -t lreimer/hands-on-distroless:busybox distroless-busybox/
 	@echo ""
-	$(call green, "Try out with 'docker run --rm -it lreimer/hands-on-distroless:busybox'")
+	$(call green, "Show history with 'docker history lreimer/hands-on-distroless:busybox'")
 	@echo ""
-	$(call green, "Show history 'docker history lreimer/hands-on-distroless:busybox'")
+	$(call green, "Run with 'docker run --rm -it lreimer/hands-on-distroless:busybox'")
 
 distroless/golang:
 	@docker build -t lreimer/hands-on-distroless:golang distroless-golang/
 	@echo ""
-	$(call green, "Try out with 'docker run --rm -it -p 8080:8080 lreimer/hands-on-distroless:golang'")
+	$(call green, "Show history with 'docker history lreimer/hands-on-distroless:golang'")	
 	@echo ""
-	$(call green, "Show history 'docker history lreimer/hands-on-distroless:golang'")
+	$(call green, "Run with 'docker run --rm -it -p 8080:8080 lreimer/hands-on-distroless:golang'")
 
 distroless/payara:
 	@docker build -t lreimer/hands-on-distroless:payara distroless-payara/
 	@echo ""
-	$(call green, "Try out with 'docker run --rm -it -p 8080:8080 lreimer/hands-on-distroless:payara'")
+	$(call green, "Show history with 'docker history lreimer/hands-on-distroless:payara'")
 	@echo ""
-	$(call green, "Show history 'docker history lreimer/hands-on-distroless:payara'")
+	$(call green, "Run with 'docker run --rm -it -p 8080:8080 lreimer/hands-on-distroless:payara'")
 
 distroless/spring:
 	@docker build -t lreimer/hands-on-distroless:spring distroless-spring/
 	@echo ""
-	$(call green, "Try out with 'docker run --rm -it -p 8080:8080 lreimer/hands-on-distroless:spring'")
+	$(call green, "Show history with 'docker history lreimer/hands-on-distroless:spring'")
 	@echo ""
-	$(call green, "Show history 'docker history lreimer/hands-on-distroless:spring'")
+	$(call green, "Run with 'docker run --rm -it -p 8080:8080 lreimer/hands-on-distroless:spring'")
