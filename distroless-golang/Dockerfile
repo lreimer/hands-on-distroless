@@ -1,15 +1,16 @@
-# Step 1: start building the Golang application
-FROM golang:1.14.3-buster as build
+# Stage 1: build Golang application
+FROM golang:1.14.3-buster as builder
 
 WORKDIR /go/src/app
 ADD . /go/src/app
 
-RUN go build -o /go/bin/app
+RUN go build -o /go/bin/distroless-golang
 
-# Step 2: copy final binary artefact into a base image
+# Stage 2: build Distroless image
 FROM gcr.io/distroless/base-debian10
 
 EXPOSE 8080
-CMD ["/app"]
+CMD ["/distroless-golang"]
 
-COPY --from=build /go/bin/app /
+# Step 2: copy binary from builder stage onto Distroless image
+COPY --from=builder /go/bin/distroless-golang /
