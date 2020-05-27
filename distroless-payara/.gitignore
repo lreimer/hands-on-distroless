@@ -1,0 +1,17 @@
+.gradle
+.vscode/
+.idea/
+.settings/
+/build/
+bin/
+
+gradle-app.setting
+
+!gradle-wrapper.jar
+
+# Cache of project
+.gradletasknamecache
+
+build
+.project
+.classpath

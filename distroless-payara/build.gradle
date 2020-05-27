@@ -1,0 +1,28 @@
+plugins {
+    id 'java'
+    id 'war'
+
+    id "fish.payara.micro-gradle-plugin" version "1.0.3"
+}
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+    providedCompile 'jakarta.platform:jakarta.jakartaee-api:8.0.0'
+
+    providedCompile(platform('org.eclipse.microprofile:microprofile:3.2'))
+    providedCompile 'org.eclipse.microprofile.config:microprofile-config-api'
+    providedCompile 'org.eclipse.microprofile.metrics:microprofile-metrics-api'
+    providedCompile 'org.eclipse.microprofile.health:microprofile-health-api'
+}
+
+task kick(dependsOn: clean) {}
+
+payaraMicro {
+    payaraVersion = '5.201'
+    useUberJar = false
+    deployWar = true
+    daemon = false
+}
