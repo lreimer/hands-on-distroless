@@ -1,4 +1,4 @@
-FROM openjdk:11 as builder
+FROM openjdk:11-buster as builder
 
 WORKDIR /payara
 

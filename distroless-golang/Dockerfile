@@ -10,6 +10,8 @@ RUN go build -o /go/bin/distroless-golang
 FROM gcr.io/distroless/base-debian10
 LABEL maintainer="qaware-oss@qaware.de"
 
+USER nobody:nobody
+
 EXPOSE 8080
 CMD ["/distroless-golang"]
 

@@ -1,5 +1,5 @@
 # Stage 1: build Spring Boot application
-FROM openjdk:11 as builder
+FROM openjdk:11-buster as builder
 
 WORKDIR /spring
 
@@ -17,6 +17,8 @@ RUN ./gradlew --no-daemon assemble
 # Stage 2: build Distroless runtime image
 FROM gcr.io/distroless/java:11
 LABEL maintainer="qaware-oss@qaware.de"
+
+USER nobody:nobody
 
 EXPOSE 8080
 CMD ["distroless-spring.jar"]
