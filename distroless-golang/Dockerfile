@@ -6,8 +6,9 @@ ADD . /go/src/app
 
 RUN go build -o /go/bin/distroless-golang
 
-# Stage 2: build Distroless image
+# Stage 2: build Distroless runtime image
 FROM gcr.io/distroless/base-debian10
+LABEL maintainer="qaware-oss@qaware.de"
 
 EXPOSE 8080
 CMD ["/distroless-golang"]

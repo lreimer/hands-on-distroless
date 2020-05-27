@@ -14,8 +14,9 @@ RUN ./gradlew --no-daemon dependencies
 COPY src/ src/
 RUN ./gradlew --no-daemon assemble
 
-# Stage 2: build Distroless image
+# Stage 2: build Distroless runtime image
 FROM gcr.io/distroless/java:11
+LABEL maintainer="qaware-oss@qaware.de"
 
 EXPOSE 8080
 CMD ["distroless-spring.jar"]
