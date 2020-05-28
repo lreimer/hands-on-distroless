@@ -1,3 +1,4 @@
+# Stage 1: build Jakarta EE web application
 FROM openjdk:11-buster as builder
 
 WORKDIR /payara

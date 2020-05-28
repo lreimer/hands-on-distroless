@@ -10,10 +10,10 @@ agenda:
 	@echo ""
 	$(call green, "   make distroless/pull    - Step 1: Pull Distroless base images")
 	$(call green, "   make distroless/history - Step 2: Show history for Distroless base images")
-	$(call green, "   make distroless/golang  - Step 3: Build a Distroless image for Golang")
-	$(call green, "   make distroless/payara  - Step 4: Build a Distroless image for Payara Micro")
+	$(call green, "   make distroless/busybox - Step 3: Build a Distroless image with BusyBox shell")
+	$(call green, "   make distroless/golang  - Step 4: Build a Distroless image for Golang")
 	$(call green, "   make distroless/spring  - Step 5: Build a Distroless image for Spring Boot")
-	$(call green, "   make distroless/busybox - Step 6: Build a Distroless image with BusyBox shell")
+	$(call green, "   make distroless/payara  - Step 6: Build a Distroless image for Payara Micro")
 
 distroless/pull:
 	$(call green, "# Use for 'mostly-statically compiled' languages like Go")
